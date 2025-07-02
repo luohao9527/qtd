@@ -43,4 +43,4 @@
 
 1. 确保已安装 `yun-design`、`@ylz-use/core`、`@ylz-material/pro-table` 等依赖
 2. API 函数返回的数据格式需符合 yun-pro-table 要求
-3. 不要擅自扩展模板文件或文件内容结构，直接复制到项目中即可
+3. 除非用户明确要求定制，否则直接使用模板目录下的文件内容
