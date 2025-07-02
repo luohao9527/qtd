@@ -1,8 +1,8 @@
-# Pro-Table 自动生成基础列表模板
+# 通用表格管理模板
 
 ## 模板简介
 
-这是一个用于快速生成管理模块列表页面的 Vue 3 模板。基于 Yun Design 的 yun-pro-table 组件和 useProTable 结合使用，提供完整的列表页面功能。
+这是一个用于快速生成通用表格管理的 Vue 3 模板。基于 Yun Design 的 yun-pro-table 组件和 useProTable 结合使用，提供完整的列表页面功能。
 
 ## 功能特性
 
