@@ -1,40 +1,38 @@
 <template>
-  <NhPageBlock fill>
-    <div class="page-container">
-      <div class="page-container__header">
-        <el-tabs
-          v-model="tabName"
-          class="demo-tabs"
-        >
-          <el-tab-pane
-            v-for="item in tabOptions"
-            :key="item.value"
-            :label="item.label"
-            :name="item.value"
-          />
-        </el-tabs>
-      </div>
-      
-      <div class="page-container__content">
-        <yun-pro-table
-          ref="proTableRef"
-          v-model:tableData="tableData"
-          v-model:pagination="pagination"
-          v-model:searchData="searchData"
-          v-model:filter-data="filterTableData"
-          :search-fields="searchFields"
-          :table-columns="tableColumns"
-          :remote-method="remoteMethod"
-          :table-props="{
-            ...tableProps,
-            tableHeaderKey: `${$route.path}-list`,
-          }"
-          auto-height
-          reset-fetch
+  <div class="page-container">
+    <div class="page-container__header">
+      <el-tabs
+        v-model="tabName"
+        class="demo-tabs"
+      >
+        <el-tab-pane
+          v-for="item in tabOptions"
+          :key="item.value"
+          :label="item.label"
+          :name="item.value"
         />
-      </div>
+      </el-tabs>
     </div>
-  </NhPageBlock>
+    
+    <div class="page-container__content">
+      <yun-pro-table
+        ref="proTableRef"
+        v-model:tableData="tableData"
+        v-model:pagination="pagination"
+        v-model:searchData="searchData"
+        v-model:filter-data="filterTableData"
+        :search-fields="searchFields"
+        :table-columns="tableColumns"
+        :remote-method="remoteMethod"
+        :table-props="{
+          ...tableProps,
+          tableHeaderKey: `${$route.path}-list`,
+        }"
+        auto-height
+        reset-fetch
+      />
+    </div>
+  </div>
 </template>
 
 <script setup>
@@ -43,7 +41,6 @@ import { useProTable } from '@ylz-use/core';
 import useTabs from './hooks/useTabs';
 import useSearch from './hooks/useSearch';
 import useColumns from './hooks/useColumns';
-import { customerPointsPage } from '@/api/market/points';
 
 // pro table
 const {
@@ -54,7 +51,7 @@ const {
   filterTableData,
   reLoad,
 } = useProTable({
-  apiFn: customerPointsPage,
+  apiFn: () => {},
   paramsHandler(data) {
     const params = {
       ...data,
