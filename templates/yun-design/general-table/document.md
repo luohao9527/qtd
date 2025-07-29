@@ -41,6 +41,6 @@
 
 ## 注意事项
 
-1. 确保已安装 `yun-design`、`@ylz-use/core`、`@ylz-material/pro-table` 等依赖
+1. 应用模板时，先检查确保已安装 `yun-design`、`@ylz-use/core`、`@ylz-material/pro-table` 依赖
 2. API 函数返回的数据格式需符合 yun-pro-table 要求
 3. 除非用户明确要求定制，否则直接使用模板目录下的文件内容
